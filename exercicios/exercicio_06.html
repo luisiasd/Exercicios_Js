@@ -19,10 +19,36 @@
 </head>
 <body>
     <div id="area">
+
+        <!Disparar a função e configurar o métedo >
+        <! onclick="clicar()" onmouseenter="entrar()" onmouseout="sair(),
+        esse comando pode ser substituido pelo listener > 
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Molestias eaque quaerat maxime, a dolore obcaecati enim 
              nobis facilis optio nisi ducimus libero sit voluptates quasi
               numquam quos aliquid amet labore?</p>
     </div>
+    <script>
+        var b = window.document.getElementById('area')
+        b.addEventListener('click', clicar)
+        b.addEventListener('mouseenter', entrar)
+        b.addEventListener('mouseout', sair)
+        function clicar(){//Executa somente depois de chamar o clicar para a função
+            //var area = window.document.getElementById('area')
+            b.innerText = 'Nice!'
+            b.style.background = '#0557AF'
+        }
+        function entrar(){
+            //var entrar = window.document.getElementById('area')
+            b.innerText = 'Agora clica!'
+            b.style.background = '#AED1F7'
+        }
+        function sair(){
+            //var sair = window.document.getElementById('area')
+            b.innerText = 'Try again!'
+            b.style.background = '#D98A02'
+        }
+    </script>
 </body>
 </html>
